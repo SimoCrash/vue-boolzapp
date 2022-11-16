@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+
+.top-bg {
+    background-color: #009688;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.main-bg {
+    background-color: #DCDBD2;
+    height: 85vh;
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    left: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CONTAINER BOOLZAPP */
+
+.container-boolzapp {
+    margin-top: 2rem;
+    height: 95vh;
+    width: 75vw;
+    z-index: 12;
+    position: relative;
+}
+
+
+/* CONTAINER LEFT */
+
+.container-left {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: green;
+    border-right: blue;
+}
+
+.user-profile {
+    background-color: #EAEAEA;
+    height: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* CONTAINER RIGHT */
+
+.container-right {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gold;
+}
