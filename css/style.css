@@ -50,15 +50,32 @@
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: green;
-    border-right: blue;
+    border-right: 3px solid #3EBDFF;
 }
 
 .user-profile {
     background-color: #EAEAEA;
-    height: 5%;
+    height: 10%;
     display: flex;
     justify-content: space-around;
+}
+
+.notice {
+    background-color: #8EDAFC;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-profile {
+    background-color: #FAFAFA;
+    height: 5%;
+}
+
+.chat-profile {
+    background-color: white;
+    height: 75%;
+    overflow-y: scroll;
 }
 
 
@@ -70,5 +87,18 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: gold;
+}
+
+.main {
+    background-image: url("../img/mine.jpg");
+    background-repeat: repeat;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.chat {
+    background-color: #F3EEEA;
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
 }
