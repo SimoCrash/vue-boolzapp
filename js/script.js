@@ -165,14 +165,13 @@ var app = new Vue({
             }
         ],
         selectedUserMessages: [],
-        selectedUser: [],
+        selectedUser: "",
     },
     methods: {
         profileActive(i) {
             this.selectedUserMessages = this.contacts[i].messages;
-            this.selectedUser = this.contacts[i].name;
-            console.log(this.selectedUser)
-
+            this.selectedUser = this.contacts[i];
+            console.log(this.selectedUser);
         }
     },
 })
