@@ -156,6 +156,17 @@ body {
     gap: .5rem;
 }
 
+.contact-message-hour {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-message-hour .last-message, .contact-message-hour .hour {
+    color: #B1B1B1;
+}
+
+
 
 /* CONTAINER RIGHT */
 

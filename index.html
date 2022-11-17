@@ -16,6 +16,13 @@
     
         <!-- link css -->
         <link rel="stylesheet" href="css/style.css">
+
+        <!-- style -->
+        <style>
+            [v-cloak] {
+                display: none;
+            }
+        </style>
     
         <!-- link js -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
@@ -24,7 +31,7 @@
 <body>
     <div class="top-bg"></div>
     <div class="main-bg"></div>
-    <div class="container d-flex-center">
+    <div id="root" class="container d-flex-center" v-cloak>
         <div class="container-boolzapp">
             <div class="container-left">
 
@@ -57,25 +64,103 @@
                     </div>
                 </div>
 
-                <div class="chat-profile">
+                <div class="chat-profile" v-for="contact in contacts">
                     <div class="profiles">
-                        <img src="img/avatar_1.jpg" alt="" class="img-round"><h3>Sofia</h3>
+                        <div class="images-profiles">
+                            <img src="'img/avatar' + {contact.avatar} + '.jpg'" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>{{ contact.name }}</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
                     </div>
                     <div class="profiles">
-                        <img src="img/avatar_2.jpg" alt="" class="img-round"><h3>Sofia</h3>
+                        <div class="images-profiles">
+                            <img src="'img/avatar' 'contact.avatar' '.jpg'" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>{{ contact.name }}</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
+                    </div>
+                    <!-- <div class="profiles">
+                        <div class="images-profiles">
+                            <img src="img/avatar_1.jpg" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>Sofia</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
                     </div>
                     <div class="profiles">
-                        <img src="img/avatar_3.jpg" alt="" class="img-round"><h3>Sofia</h3>
+                        <div class="images-profiles">
+                            <img src="img/avatar_1.jpg" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>Sofia</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
                     </div>
                     <div class="profiles">
-                        <img src="img/avatar_4.jpg" alt="" class="img-round"><h3>Sofia</h3>
+                        <div class="images-profiles">
+                            <img src="img/avatar_1.jpg" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>Sofia</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
                     </div>
                     <div class="profiles">
-                        <img src="img/avatar_5.jpg" alt="" class="img-round"><h3>Sofia</h3>
+                        <div class="images-profiles">
+                            <img src="img/avatar_1.jpg" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>Sofia</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
                     </div>
                     <div class="profiles">
-                        <img src="img/avatar_6.jpg" alt="" class="img-round"><h3>Sofia</h3>
+                        <div class="images-profiles">
+                            <img src="img/avatar_1.jpg" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>Sofia</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
                     </div>
+                    <div class="profiles">
+                        <div class="images-profiles">
+                            <img src="img/avatar_1.jpg" alt="" class="img-round">
+                        </div>
+                        <div class="contact-message-hour">
+                            <div>
+                                <h3>Sofia</h3>
+                                <div class="last-message">ultimo messaggio</div>
+                            </div>
+                            <div class="hour">12:00</div>
+                        </div>
+                    </div> -->
                 </div>
 
             </div>
