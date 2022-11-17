@@ -164,5 +164,11 @@ var app = new Vue ({
             ],
             }
             ]
+    },
+    methods: {
+        profileActive(){
+            const person = this.contacts[i].messages[this.contacts.messages[message]];
+            console.log(person);
+        }
     }
 })

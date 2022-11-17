@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="chat-profile" >
-                    <div class="profiles" v-for="contact in contacts">
+                    <div class="profiles" v-for="contact in contacts" :key="contact.name" @click="profileActive">
                         <div class="images-profiles">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="img-round">
                         </div>
@@ -105,7 +105,7 @@
                         <div class="message-hour">12:00</div>
                     </div>
                 </div>
-                
+
                 <div class="chat">
                     <div><i class="fa-regular fa-face-smile"></i></div>
                     <div class="container-input-message">
