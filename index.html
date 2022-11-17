@@ -97,16 +97,19 @@
 
                 <div class="main">
                     <div v-for="(message, i) in selectedUserMessages">
-       
                         <div class="chat-receipts">
-                            <div>
+                            <div class="container-message-receipts">
                                 <div class="message-chat">{{message.message}}</div>
                                 <div class="message-hour">12:00</div>    
                             </div>  
                         </div>
-                        
+                        <div class="chat-sent">
+                            <div class="container-message-sent">
+                                <div class="message-chat">{{message.message}}</div>
+                                <div class="message-hour">12:00</div>    
+                            </div>  
+                        </div>    
                     </div>
-                    
                 </div>
 
                 <div class="chat">

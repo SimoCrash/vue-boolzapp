@@ -200,19 +200,30 @@ body {
 
 .chat-sent {
     justify-content: flex-end;
-    justify-self: flex-end;
+}
+
+.container-message-receipts {
+    background-color: white;
+    border-radius: .5rem;
+    border-top-left-radius: 0;
+}
+
+.container-message-sent {
+    background-color: #d9fdd3;
+    border-radius: .5rem;
+    border-top-right-radius: 0;
 }
 
 .message-chat {
     text-align: center;
-    padding: S2rem;
+    padding: 1rem 1rem .5rem 1rem;
 }
 
 .message-hour {
     float: right;
     font-size: .7rem;
     color: #B1B1B1;
-    padding: .5rem;
+    padding: 0 0.5rem 0.5rem;
 }
 
 /* chat */
