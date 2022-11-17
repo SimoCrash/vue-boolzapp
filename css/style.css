@@ -178,11 +178,41 @@ body {
     bottom: 0;
 }
 
+
+/* main */
+
 .main {
     background-image: url("../img/mine.jpg");
     background-repeat: repeat;
     height: 86%;
     overflow-y: scroll;
+}
+
+.chat-receipts {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 0 1 50%;
+}
+
+.chat-sent {
+    background-color: #009688;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 0 1 50%;
+}
+
+.message-chat {
+    text-align: center;
+    padding: 2rem;
+}
+
+.message-hour {
+    float: right;
+    font-size: .5rem;
+    color: #B1B1B1;
 }
 
 .chat {
