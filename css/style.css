@@ -188,20 +188,23 @@ body {
     overflow-y: scroll;
 }
 
+.chat-receipts, .chat-sent {
+    display: flex;
+    align-items: flex-end;
+    margin: .5rem 1rem;
+    border-radius: 15px;
+    width: 50%;
+}
+
 .chat-receipts {
     background-color: white;
-    display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
-    flex: 0 1 50%;
 }
 
 .chat-sent {
-    background-color: #009688;
-    display: flex;
+    background-color: #D9FDD3;
     justify-content: flex-end;
-    align-items: flex-end;
-    flex: 0 1 50%;
+    justify-self: flex-end;
 }
 
 .message-chat {
@@ -211,8 +214,9 @@ body {
 
 .message-hour {
     float: right;
-    font-size: .5rem;
+    font-size: .7rem;
     color: #B1B1B1;
+    padding: .5rem;
 }
 
 .chat {
