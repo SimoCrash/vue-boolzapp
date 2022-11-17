@@ -64,10 +64,10 @@
                     </div>
                 </div>
 
-                <div class="chat-profile" v-for="contact in contacts">
-                    <div class="profiles">
+                <div class="chat-profile" >
+                    <div class="profiles" v-for="contact in contacts">
                         <div class="images-profiles">
-                            <img src="'img/avatar' + 'contact.avatar' + '.jpg'" alt="" class="img-round">
+                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="img-round">
                         </div>
                         <div class="contact-message-hour">
                             <div>
@@ -77,7 +77,7 @@
                             <div class="hour">12:00</div>
                         </div>
                     </div>
-                    <div class="profiles">
+                    <!-- <div class="profiles">
                         <div class="images-profiles">
                             <img src="'img/avatar' 'contact.avatar' '.jpg'" alt="" class="img-round">
                         </div>
@@ -88,7 +88,7 @@
                             </div>
                             <div class="hour">12:00</div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="profiles">
                         <div class="images-profiles">
                             <img src="img/avatar_1.jpg" alt="" class="img-round">
