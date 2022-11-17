@@ -192,23 +192,20 @@ body {
     display: flex;
     align-items: flex-end;
     margin: .5rem 1rem;
-    border-radius: 15px;
 }
 
 .chat-receipts {
-    background-color: white;
     justify-content: flex-start;
 }
 
 .chat-sent {
-    background-color: #D9FDD3;
     justify-content: flex-end;
     justify-self: flex-end;
 }
 
 .message-chat {
     text-align: center;
-    padding: 2rem;
+    padding: S2rem;
 }
 
 .message-hour {
