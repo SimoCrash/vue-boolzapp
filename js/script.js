@@ -171,5 +171,8 @@ var app = new Vue({
             this.selectedUserMessages = this.contacts[i].messages;
 
         }
+    },
+    mounted: {
+        
     }
 })
