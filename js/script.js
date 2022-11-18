@@ -164,16 +164,14 @@ var app = new Vue({
                 ],
             }
         ],
-        selectedUserMessages: [],
-        selectedUser: "",
+        selectedUserMessages: 0,
     },
     methods: {
-        profileActive(i) {
-            this.selectedUserMessages = this.contacts[i].messages;
-            this.selectedUser = this.contacts[i];
-            console.log(this.selectedUser);
+        profileActive(index) {
+            this.selectedUserMessages = index;
         }
     },
+
 })
 
 
@@ -182,3 +180,17 @@ var app = new Vue({
 
 
 
+
+// selectedUserMessages: [],
+//         selectedUser: "",
+//     },
+//     methods: {
+//         profileActive(i) {
+//             this.selectedUserMessages = this.contacts[i].messages;
+//             this.selectedUser = this.contacts[i].name;
+//             console.log(this.selectedUserMessages);
+//             console.log(this.selectedUser);
+//         }
+//     },
+
+// })

@@ -84,9 +84,9 @@
             
             <div class="container-right">
                 <div class="user-profile">
-                    <div class="d-flex-center u-p-icons" v-for="(profile) in selectedUser" :key="profile.name">
-                        <img :src="'img/avatar' + profile.avatar + '.jpg'" alt="" class="img-round">
-                        <h3>{{ profile }}</h3>
+                    <div class="d-flex-center u-p-icons">
+                        <img :src="'img/avatar' + contacts[selectedUserMessages].avatar + '.jpg'" alt="" class="img-round">
+                        <h3>{{ contacts[selectedUserMessages].name }}</h3>
                     </div>
                     <div class="d-flex-center u-p-icons">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -96,17 +96,17 @@
                 </div>
 
                 <div class="main">
-                    <div v-for="(message, i) in selectedUserMessages">
+                    <div v-for="(message, i) in contacts">
                         <div class="chat-receipts">
                             <div class="container-message-receipts">
-                                <div class="message-chat">{{message.message}}</div>
-                                <div class="message-hour">{{message.date}}</div>    
+                                <div class="message-chat">{{ message.message}}</div>
+                                <div class="message-hour">{{ contacts[selectedUserMessages.message]}}</div>    
                             </div>  
                         </div>
                         <div class="chat-sent">
                             <div class="container-message-sent">
-                                <div class="message-chat">{{message.message}}</div>
-                                <div class="message-hour">{{message.date}}</div>    
+                                <div class="message-chat">{{message[i]}}</div>
+                                <div class="message-hour">{{date}}</div>    
                             </div>  
                         </div>    
                     </div>
@@ -127,3 +127,36 @@
 </body>
 </html>
 
+
+
+
+
+<!-- <div class="container-right">
+    <div class="user-profile">
+        <div class="d-flex-center u-p-icons" v-for="profile in selectedUser" :key="profile.name">
+            <img :src="'img/avatar' + profile.avatar + '.jpg'" alt="" class="img-round">
+            <h3>{{ profile }}</h3>
+        </div>
+        <div class="d-flex-center u-p-icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-paperclip"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </div>
+
+    <div class="main">
+        <div v-for="(message, i) in selectedUserMessages">
+            <div class="chat-receipts">
+                <div class="container-message-receipts">
+                    <div class="message-chat">{{message.message}}</div>
+                    <div class="message-hour">{{message.date}}</div>    
+                </div>  
+            </div>
+            <div class="chat-sent">
+                <div class="container-message-sent">
+                    <div class="message-chat">{{message.message}}</div>
+                    <div class="message-hour">{{message.date}}</div>    
+                </div>  
+            </div>    
+        </div>
+    </div> -->
