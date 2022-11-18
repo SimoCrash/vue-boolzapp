@@ -169,8 +169,16 @@ var app = new Vue({
     methods: {
         profileActive(index) {
             this.selectedUserMessages = index;
+        },
+        status(){
+           if(this.contacts[selectedUserMessages].messages == received){
+            return true;
+           } else {
+            return false;
+           }
         }
-    },
+    }, 
+
 
 })
 

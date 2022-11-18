@@ -97,13 +97,13 @@
 
                 <div class="main">
                     <div v-for="(msg, i) in contacts[selectedUserMessages].messages">
-                        <div v-if="msg.status == received" class="chat-receipts">
+                        <div v-if="msg.status == 'received'" class="chat-receipts">
                             <div class="container-message-receipts">
                                 <div class="message-chat">{{ msg.message}}</div>
                                 <div class="message-hour">{{ msg.date }}</div>    
                             </div>  
                         </div>
-                        <div v-else="msg.status == sent" class="chat-sent">
+                        <div v-else="msg.status == 'sent'" class="chat-sent">
                             <div class="container-message-sent">
                                 <div class="message-chat">{{ msg.message}}</div>
                                 <div class="message-hour">{{ msg.date }}</div>    
