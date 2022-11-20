@@ -25,6 +25,7 @@
         </style>
     
         <!-- link js -->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
         <script src="js/script.js" defer></script>
     </head>
@@ -115,7 +116,7 @@
                 <div class="chat">
                     <div><i class="fa-regular fa-face-smile"></i></div>
                     <div class="container-input-message">
-                        <input type="text" placeholder="Scrivi un messaggio" class="write-message">
+                        <input type="text" placeholder="Scrivi un messaggio" class="write-message" v-model="newMessage" @keyup.enter="writeMessage">
                     </div>
                     <div><i class="fa-solid fa-microphone"></i></div>
                 </div>

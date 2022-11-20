@@ -165,17 +165,22 @@ var app = new Vue({
             }
         ],
         selectedUserMessages: 0,
+        newMessage: "",
     },
     methods: {
         profileActive(index) {
             this.selectedUserMessages = index;
         },
-        status(){
-           if(this.contacts[selectedUserMessages].messages == received){
-            return true;
-           } else {
-            return false;
-           }
+        writeMessage(){
+            if(
+                this.contacts[this.selectedUserMessages].messages.push({
+                date: luxon.DateTime.now().toFormat('dd/LL/yyyy HH:mm:ss'),
+                message: this.newMessage.charAt(0).toUpperCase() + this.newMessage.slice(1),
+                status: 'sent'
+            }))
+            {
+                this.newMessage = "";
+            }
         }
     }, 
 
