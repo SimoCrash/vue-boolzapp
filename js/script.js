@@ -200,21 +200,36 @@ var app = new Vue({
 			return Math.floor(Math.random() * (max - min + 1) ) + min;
 		},
 
+        // getProfile(){
+        //     this.contacts.forEach((contact) => {
+        //         if(contact.name[this.activeContact].includes(this.searchProfile)){
+        //             contact = true;
+        //         } else {
+        //             contact = false;
+        //             console.log(contact)
+        //         }
+        //     });
+            
+        //     console.log(this.i)
+        //     console.log(this.contacts.name[this.contacts.name[this.activeContact]].includes(this.searchProfile))
+        // }
+
         getProfile(){
-            for(let i = 0; i < this.contacts.length -1; i++){
-                
-                if(this.contacts[i].name.includes(this.searchProfile)){
-                    this.activeContact[i] = true;
-                } else {
-                    this.activeContact[i] = false;
+            for(let i=0; i<this.contacts.length; i++){
+                if(this.contacts[i].name.toLowerCase().includes(this.searchProfile.toLowerCase())){
+                    this.contacts[i].visible = true;
+                    console.log(this.contacts[i].visible)
                 }
-            }
-            console.log(this.index.name)
-            console.log(this.searchProfile)
-        }
+                else{
+                    this.contacts[i].visible = false;
+                    console.log(this.contacts[i].visible)
+                }
+            } 
+        },
+
+    }
 
         
-    }, 
 
 
 })
@@ -255,6 +270,37 @@ var app = new Vue({
 //     console.log(this.index.name)
 //     console.log(this.searchProfile)
 // }
+
+//evoluta ma non funzionante lo stesso
+
+{/* <div class="profiles" :class="(contact == false) ? 'hidden' : ''" v-for="(contact, i) in contacts" :key="contact.name" @click="profileActive(i)"> */}
+// getProfile(){
+//     for(let i = 0; i < this.contacts.length; i++){
+        
+//         if(this.contacts[i].name.toLowerCase().includes(this.searchProfile.toLowerCase())){
+//             this.contacts[i] = true;
+//         } else {
+//             this.contacts[i] = false;
+//         }
+//     }
+//     console.log(this.index.name)
+//     console.log(this.searchProfile)
+// },
+
+// }
+
+ // getProfile(){
+        //     for(let i=0; i<this.contacts.length; i++){
+        //         if(this.contacts[i].name.toLowerCase().includes(this.searchProfile.toLowerCase())){
+        //             this.contacts[i].visible = true;
+        //             console.log(this.contacts[i].visible)
+        //         }
+        //         else{
+        //             this.contacts[i].visible = false;
+        //             console.log(this.contacts[i].visible)
+        //         }
+        //     } 
+        // },
 
 
 

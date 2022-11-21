@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="chat-profile" >
-                    <div class="profiles" v-for="(contact, i) in contacts" :key="contact.name" @click="profileActive(i)">
+                    <div class="profiles" v-for="(contact, i) in contacts" :key="contact.name" @click="profileActive(i)" :class="(contact.visible == false) ? 'hidden' : ''">
                         <div class="images-profiles">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="img-round">
                             <h3>{{ contact.name }}</h3>
