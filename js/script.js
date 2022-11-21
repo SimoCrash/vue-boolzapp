@@ -212,6 +212,8 @@ var app = new Vue({
             console.log(this.index.name)
             console.log(this.searchProfile)
         }
+
+        
     }, 
 
 
