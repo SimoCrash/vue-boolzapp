@@ -164,24 +164,39 @@ var app = new Vue({
                 ],
             }
         ],
-        selectedUserMessages: 0,
+        activeContact: 0,
         newMessage: "",
+        messageReceived: "",
     },
     methods: {
         profileActive(index) {
-            this.selectedUserMessages = index;
+            this.activeContact = index;
         },
         writeMessage(){
             if(
-                this.contacts[this.selectedUserMessages].messages.push({
-                date: luxon.DateTime.now().toFormat('dd/LL/yyyy HH:mm:ss'),
+                this.contacts[this.activeContact].messages.push({
+                date: this.nowDate(),
                 message: this.newMessage.charAt(0).toUpperCase() + this.newMessage.slice(1),
                 status: 'sent'
             }))
             {
                 this.newMessage = "";
+                const activeReceived = this.activeContact;
+                this.messageReceived = setTimeout(() => {
+                    this.contacts[activeReceived].messages.push({
+                        date: this.nowDate(),
+                        message: 'ok',
+                        status: 'received'
+                    })
+            }, this.getRandomInteger(1000, 5000));
             }
-        }
+        },
+        nowDate(){
+            return luxon.DateTime.now().toFormat('dd/LL/yyyy HH:mm:ss');
+        },
+        getRandomInteger(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) ) + min;
+		},
     }, 
 
 
@@ -190,20 +205,46 @@ var app = new Vue({
 
 
 
+//selectedUserMessages era al posto di activeContact
 
 
 
 
-// selectedUserMessages: [],
-//         selectedUser: "",
-//     },
-//     methods: {
-//         profileActive(i) {
-//             this.selectedUserMessages = this.contacts[i].messages;
-//             this.selectedUser = this.contacts[i].name;
-//             console.log(this.selectedUserMessages);
-//             console.log(this.selectedUser);
-//         }
-//     },
+
+// messageReceived con setTimeout
+
+// activeContact: 0,
+// newMessage: "",
+// messageReceived: "",
+// },
+// methods: {
+// profileActive(index) {
+//     this.activeContact = index;
+// },
+// writeMessage(){
+//     if(
+//         this.contacts[this.activeContact].messages.push({
+//         date: this.nowDate(),
+//         message: this.newMessage.charAt(0).toUpperCase() + this.newMessage.slice(1),
+//         status: 'sent'
+//     }))
+//     {
+//         this.newMessage = "";
+//         this.messageReceived = setTimeout(this.myfunction, 1000);
+//     }
+// },
+// nowDate(){
+//     return luxon.DateTime.now().toFormat('dd/LL/yyyy HH:mm:ss');
+// },
+// myfunction(){
+//         this.contacts[this.activeContact].messages.push({
+//             date: this.nowDate(),
+//             message: 'ok',
+//             status: 'received'
+//         })
+// }
+// }, 
+
 
 // })
+
