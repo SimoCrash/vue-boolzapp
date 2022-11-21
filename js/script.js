@@ -194,7 +194,7 @@ var app = new Vue({
             }
         },
         nowDate(){
-            return luxon.DateTime.now().toFormat('dd/LL/yyyy HH:mm:ss');
+            return luxon.DateTime.now().toFormat('dd/LL/yyyy HH:mm');
         },
         getRandomInteger(min, max) {
 			return Math.floor(Math.random() * (max - min + 1) ) + min;
