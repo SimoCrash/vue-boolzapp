@@ -167,11 +167,13 @@ var app = new Vue({
         activeContact: 0,
         newMessage: "",
         messageReceived: "",
+        searchProfile: "",
     },
     methods: {
         profileActive(index) {
             this.activeContact = index;
         },
+
         writeMessage(){
             if(
                 this.contacts[this.activeContact].messages.push({
@@ -197,6 +199,15 @@ var app = new Vue({
         getRandomInteger(min, max) {
 			return Math.floor(Math.random() * (max - min + 1) ) + min;
 		},
+
+        getProfile(){
+            if((this.contact[this.activeContact].name).includes(this.searchProfile)){
+                this.activeContact = this.contact[this.activeContact].name;
+                
+            }
+            console.log(this.contact[this.activeContact].name)
+            console.log(this.searchProfile)
+        }
     }, 
 
 
@@ -206,6 +217,20 @@ var app = new Vue({
 
 
 //selectedUserMessages era al posto di activeContact
+
+
+
+
+//perchè non funziona?
+
+// getProfile(){
+//     if((this.contacts[this.activeContact].name).includes(this.searchProfile)){
+//         this.activeContact = this.contacts[this.activeContact].name;
+        
+//     }
+//     console.log(this.contacts[this.activeContact].name)
+//     console.log(this.searchProfile)
+// }
 
 
 
