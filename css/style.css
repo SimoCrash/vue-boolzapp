@@ -150,8 +150,8 @@ body {
     gap: .5rem;
 }
 
-.profiles {
-    align-items: center;
+.chat-profile:hover {
+    cursor: default;
 }
 
 .images-profiles {
@@ -159,6 +159,11 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: .5rem;
+}
+
+.profiles:hover{
+    cursor: pointer;
+    background-color: #EAEAEA;
 }
 
 .contact-message-hour {
