@@ -249,3 +249,7 @@ body {
     border-radius: 5px;
     width: 100%;
 }
+
+.hidden {
+    display: none;
+}

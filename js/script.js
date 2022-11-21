@@ -201,11 +201,15 @@ var app = new Vue({
 		},
 
         getProfile(){
-            if((this.contact[this.activeContact].name).includes(this.searchProfile)){
-                this.activeContact = this.contact[this.activeContact].name;
+            for(let i = 0; i < this.contacts.length -1; i++){
                 
+                if(this.contacts[i].name.includes(this.searchProfile)){
+                    this.activeContact[i] = true;
+                } else {
+                    this.activeContact[i] = false;
+                }
             }
-            console.log(this.contact[this.activeContact].name)
+            console.log(this.index.name)
             console.log(this.searchProfile)
         }
     }, 
@@ -233,6 +237,22 @@ var app = new Vue({
 // }
 
 
+
+// perchè non funziona?
+// <input type="text" class="search" placeholder="Cerca o inizia una nuova chat" v-model="searchProfile" @keyup="getProfile">
+// <div class="profiles" :class="(activeContact == false) ? 'hidden' : ''" v-for="(contact, i) in contacts" :key="contact.name" @click="profileActive(i)">
+// getProfile(){
+//     for(let i = 0; i < this.contacts.length -1; i++){
+        
+//         if(this.contacts[i].name.includes(this.searchProfile)){
+//             this.activeContact[i] = true;
+//         } else {
+//             this.activeContact[i] = false;
+//         }
+//     }
+//     console.log(this.index.name)
+//     console.log(this.searchProfile)
+// }
 
 
 
